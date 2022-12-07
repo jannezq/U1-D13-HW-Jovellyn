@@ -57,9 +57,6 @@ function getTaskAsArray() {
 function changeTaskBackgroundColor() {
   let pickColor = document.getElementById("colorPicker");
   pickColor.addEventListener("change", function () {
-    for (let i = 0; i < listNodes.length; i++) {
-      listNodes[i].style.backgroundColor = pickColor.value;
-      console.log(pickColor.value);
-    }
+    lists.style.backgroundColor = pickColor.value;
   });
 }
