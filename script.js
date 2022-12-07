@@ -46,20 +46,21 @@ function removeLast() {
 
 let listGather = document.querySelectorAll("li");
 
-function changeTaskBackgroundColor() {
-  let pickColor = document.getElementById("colorPicker");
-  pickColor.addEventListener("change", function () {
-    for (let i = 0; i < listGather.length; i++) {
-      listGather[i].style.backgroundColor = pickColor.value;
-      console.log(listGather);
-    }
-  });
-}
-
 function getTaskAsArray() {
   arrayList = listGather;
   // list into an array and show in console (only call function from console )
   for (let i = 0; i < arrayList.length; i++) {
     console.log("Task list in array: ", arrayList[i].innerText);
   }
+}
+
+function changeTaskBackgroundColor() {
+  let listTag = document.getElementsByTagName("li");
+  let pickColor = document.getElementById("colorPicker");
+  pickColor.addEventListener("change", function () {
+    for (let i = 0; i < listTag.length; i++) {
+      listTag[i].style.backgroundColor = pickColor.value;
+      console.log(listTag);
+    }
+  });
 }
