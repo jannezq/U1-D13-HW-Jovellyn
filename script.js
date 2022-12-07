@@ -44,10 +44,10 @@ function removeLast() {
   lists.removeChild(lists.lastChild);
 }
 
-let listGather = document.querySelectorAll("li");
+let listNodes = document.querySelectorAll("li");
 
 function getTaskAsArray() {
-  arrayList = listGather;
+  arrayList = listNodes;
   // list into an array and show in console (only call function from console )
   for (let i = 0; i < arrayList.length; i++) {
     console.log("Task list in array: ", arrayList[i].innerText);
@@ -55,12 +55,11 @@ function getTaskAsArray() {
 }
 
 function changeTaskBackgroundColor() {
-  let listTag = document.getElementsByTagName("li");
   let pickColor = document.getElementById("colorPicker");
   pickColor.addEventListener("change", function () {
-    for (let i = 0; i < listTag.length; i++) {
-      listTag[i].style.backgroundColor = pickColor.value;
-      console.log(listTag);
+    for (let i = 0; i < listNodes.length; i++) {
+      listNodes[i].style.backgroundColor = pickColor.value;
+      console.log(pickColor.value);
     }
   });
 }
